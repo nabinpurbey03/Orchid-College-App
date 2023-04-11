@@ -5,7 +5,8 @@ ThemeData myMainTheme() {
   return ThemeData(
     primaryColor: oPrimaryColor,
     primaryColorLight: oPrimaryColor,
-    appBarTheme: AppBarTheme(
+    primarySwatch: Colors.purple,
+    appBarTheme: const AppBarTheme(
       color: oPrimaryColor,
       centerTitle: true,
     ),
