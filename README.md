@@ -1,4 +1,4 @@
-# orchid_app
+# orchid College App
 
 A new Flutter project.
 
