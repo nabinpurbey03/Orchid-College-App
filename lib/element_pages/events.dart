@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:orchid_app/components/main_element_body.dart';
-import 'package:orchid_app/constants.dart';
 
 class Events extends StatelessWidget {
   const Events({Key? key}) : super(key: key);

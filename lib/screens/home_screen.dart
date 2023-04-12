@@ -5,6 +5,7 @@ import 'package:orchid_app/element_pages/activities.dart';
 import 'package:orchid_app/element_pages/events.dart';
 import 'package:orchid_app/element_pages/group_discussion.dart';
 import 'package:orchid_app/element_pages/notice.dart';
+import 'package:orchid_app/element_pages/project.dart';
 import 'package:orchid_app/element_pages/query.dart';
 import 'package:orchid_app/element_pages/results.dart';
 import 'package:orchid_app/element_pages/tests.dart';
@@ -29,7 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
     const Results(),
     const Query(),
     const Tests(),
-    const Activities()
+    const Activities(),
+    const Project()
   ];
 
   List<Map<String, String>> elementBox = [
@@ -42,6 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
     {"image": "assets/images/query.png", "text": "Query"},
     {"image": "assets/images/tests.png", "text": "Tests"},
     {"image": "assets/images/activities.png", "text": "Activities"},
+    {"image": "assets/images/project.png", "text": "Projects"},
   ];
 
   @override
@@ -68,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverGrid.builder(
               itemCount: elementBox.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, mainAxisSpacing: 25, crossAxisSpacing: 10),
+                  crossAxisCount: 2, mainAxisSpacing: 15, crossAxisSpacing: 10),
               itemBuilder: (context, index) => Elements(
                   onPressed: () {
                     Navigator.pushReplacement(
@@ -77,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             builder: (context) => elementBody[index]));
                   },
                   text: "${elementBox[index]["text"]}",
-                  imageLocation: "${elementBox[index]["image"]}"))
+                  image: "${elementBox[index]["image"]}"))
         ],
       ),
     );

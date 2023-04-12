@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../components/main_element_body.dart';
 
 class Notes extends StatelessWidget {

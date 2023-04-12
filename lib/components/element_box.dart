@@ -5,63 +5,71 @@ class Elements extends StatelessWidget {
   const Elements({
     super.key,
     required this.text,
-    required this.imageLocation,
+    required this.image,
     required this.onPressed,
   });
 
   final String text;
-  final String imageLocation;
+  final String image;
   final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPressed as void Function(),
-      child: Stack(children: [
-        Container(
-            // height: 250,
-            // width: 250,
-            margin: const EdgeInsets.all(5),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset.fromDirection(5, -10),
-                      color: Colors.grey.shade400,
-                      blurRadius: 10)
-                ])),
-        Positioned(
-          top: 10,
-          left: 5,
-          child: SizedBox(
-            height: 150,
-            width: 180,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(40),
-              child: Image.asset(
-                imageLocation,
-                fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: InkWell(
+        onTap: onPressed as void Function(),
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.black54,
+                        blurRadius: 20,
+                        offset: Offset(-15, 15))
+                  ]),
+            ),
+            Container(
+              height: 150,
+              width: 200,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(image), fit: BoxFit.cover),
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(25),
+                      topRight: Radius.circular(25))),
+            ),
+            Positioned(
+              top: 145,
+              child: Container(
+                width: 170,
+                height: 25,
+                decoration: const BoxDecoration(
+                  color: Colors.black12,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(25),
+                        bottomRight: Radius.circular(25))),
+                child: Text(
+                  text,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 23,
+                    fontWeight: FontWeight.bold,
+                    color: oPrimaryColor,
+                    letterSpacing: 2
+                  ),
+                ),
               ),
-            ),
-          ),
+            )
+          ],
         ),
-        Positioned(
-          top: 155,
-          child: SizedBox(
-            height: 40,
-            width: 200,
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  fontSize: 25,
-                  color: oPrimaryColor,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
-        )
-      ]),
+      ),
     );
   }
 }
