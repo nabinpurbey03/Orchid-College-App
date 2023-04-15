@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orchid_app/constants.dart';
+import 'package:orchid_app/screens/home_screen.dart';
 import 'package:orchid_app/screens/splash_screen.dart';
 import 'package:orchid_app/theme.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: myMainTheme(),
       color: oPrimaryColor,
       title: "Orchid College App",
-      home: const SplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }

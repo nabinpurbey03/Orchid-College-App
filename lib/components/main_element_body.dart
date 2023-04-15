@@ -27,27 +27,16 @@ class MainBody extends StatelessWidget {
             title: Text(
               appBerTitle,
               style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-            ),
-            leading: IconButton(
-              onPressed: () async {
-                var value = await Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
-              },
-              icon: const Icon(Icons.arrow_back_outlined),
             )),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-              child: Text(
-                text,
-                style: const TextStyle(
-                    color: Colors.white,
-                    fontFamily: "Lobster-Regular",
-                    fontSize: 36,
-                    letterSpacing: 5),
-              ),
-            )
-          ],
+        body: Center(
+          child: Text(
+            text,
+            style: const TextStyle(
+                color: Colors.white,
+                fontFamily: "Lobster-Regular",
+                fontSize: 36,
+                letterSpacing: 5),
+          ),
         ),
       ),
     );

@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   crossAxisCount: 2, mainAxisSpacing: 15, crossAxisSpacing: 10),
               itemBuilder: (context, index) => Elements(
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => elementBody[index]));
