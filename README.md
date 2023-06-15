@@ -5,6 +5,8 @@ A new Flutter project.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+![Hii](![Splash Screen](https://github.com/nabinpurbey03/Orchid-College-App/assets/112373792/0058f68b-b6eb-4ef7-9a00-2d3f5f5ae0b4)
+)
 
 A few resources to get you started if this is your first Flutter project:
 
