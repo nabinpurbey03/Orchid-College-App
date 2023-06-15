@@ -5,9 +5,10 @@ A new Flutter project.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
-![Hii](![Splash Screen](![Splash Screen](https://github.com/nabinpurbey03/Orchid-College-App/assets/112373792/29445449-f888-4db2-9d3f-8e6a5b60f33f)
-)
-)
+(![Splash Screen](![Splash Screen](https://github.com/nabinpurbey03/Orchid-College-App/assets/112373792/29445449-f888-4db2-9d3f-8e6a5b60f33f)
+) ![splash2](https://github.com/nabinpurbey03/Orchid-College-App/assets/112373792/12a92944-e7bd-4692-b696-91a6fb02c4b4)
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
